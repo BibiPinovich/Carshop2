@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="8dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/nameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="@font/aldrich"
+        android:hint="Your name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp" />
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/top5do8tisdol0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/aldrich"
+            android:rotation="20"
+            android:text="Sale - 15%"
+            android:textColor="@android:color/white"
+            android:textSize="35sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aldrich"
+        android:textSize="18sp"
+        android:layout_gravity="end"
+        android:layout_marginEnd="20dp"
+        android:text="Select item"
+        android:textColor="@android:color/black" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        tools:ignore="SpeakableTextPresentCheck">
+
+
+    </Spinner>
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fngfnfnfn"
+        android:layout_width="280dp"
+        android:layout_height="180dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/price"
+            android:text="Order price"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/aldrich"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"></TextView>
+
+
+        <TextView
+            android:id="@+id/priceText"
+            android:text="0"
+            android:layout_below="@id/price"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/aldrich"
+            android:textSize="22sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"></TextView>
+
+        <TextView
+            android:id="@+id/currText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/price"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/priceText"
+            android:fontFamily="@font/aldrich"
+            android:text="$"
+            android:textColor="@android:color/black"
+            android:textSize="22sp"></TextView>
+
+        <TextView
+            android:id="@+id/qua"
+            android:text="Quantity"
+            android:layout_toRightOf="@id/price"
+            android:layout_marginStart="110dp"
+            android:fontFamily="@font/aldrich"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"></TextView>
+        <Button
+            android:id="@+id/minBut"
+            android:onClick="minQuantity"
+            android:layout_toRightOf="@id/currText"
+            android:layout_below="@id/qua"
+            android:background="@color/purple_700"
+            android:layout_width="60dp"
+            android:textColor="@android:color/white"
+            android:text="-"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="5dp"
+            android:layout_height="60dp"></Button>
+
+        <TextView
+            android:id="@+id/countText"
+            android:text="0"
+            android:layout_toRightOf="@id/minBut"
+            android:layout_below="@id/price"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/aldrich"
+            android:textSize="22sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"></TextView>
+
+        <Button
+            android:id="@+id/plBut"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/qua"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/countText"
+            android:background="@color/purple_700"
+            android:onClick="increaseQuantity"
+            android:text="+"
+            android:textColor="@android:color/white"></Button>
+
+
+
+    </RelativeLayout>
+    <Button
+        android:text="Add to cart"
+        android:textColor="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_700"
+        android:layout_marginTop="40dp"/>
+</LinearLayout>
